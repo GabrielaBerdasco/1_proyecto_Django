@@ -1,0 +1,28 @@
+
+
+/help.txt
+ambiente_virtual/
+settings.py
+
+# Django #
+*.log
+*.pot
+*.pyc
+__pycache__
+db.sqlite3
+media
+
+
+# Python # 
+*.py[cod] 
+*$py.class 
+
+
+# Environments 
+.env 
+.venv 
+env/ 
+venv/ 
+ENV/ 
+env.bak/ 
+venv.bak/ 
