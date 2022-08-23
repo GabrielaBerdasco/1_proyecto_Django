@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from django.template import Template, Context
+from django.template import Template, Context, loader
 from datetime import datetime
 
 def hello_world(request) :
@@ -22,3 +22,11 @@ def calculate_year_of_birth(request, year) :
     </div> """
     
     return HttpResponse(data)
+
+def render_template(request) :
+    
+    user_data= {'nombre': 'Gabriela', 'apellido': 'Berdasco'}
+    temp_1 = loader.get_template("template_1.html")
+    doc_html = temp_1.render(user_data)
+
+    return HttpResponse(doc_html)
